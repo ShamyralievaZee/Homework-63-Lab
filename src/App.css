@@ -43,6 +43,12 @@ body {
   margin-bottom: 20px;
 }
 
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 .form-box {
   max-width: 600px;
@@ -86,6 +92,48 @@ body {
 .form-box button:hover {
   background-color: #d58c6d;
   color: #4e3838;
+}
+
+.post-box{
+  border: 1px solid #c3a5a5;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.post-date{
+  font-size: 14px;
+  color: #7a7777;
+}
+
+.post-title,
+.post-box a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-title{
+  color: #6a5050;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.post-read-more{
+  color: #c85e31;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+.post-edit{
+  color: black;
+  background-color: #bc9a9a;
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+  width: 50px;
+  text-align: center;
 }
 
 

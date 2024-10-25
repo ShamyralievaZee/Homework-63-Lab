@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axiosApi from '../../AxiosAPI';
 import { Post } from '../../ types';
 
 const PostForm = () => {
   const [post, setPost] = useState<Post>({ title: '', content: '', createdAt: new Date().toISOString() });
+  const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
-
-  useEffect(()=>{
-    }
-  );
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>):void => {
     const { name, value } = e.target;
@@ -27,12 +24,14 @@ const PostForm = () => {
       }
       navigate('/');
     } catch (err) {
+      setError('Failed to submit post');
       console.error(err);
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="form-box">
+      {error && <p style={{ color: 'red' }}>{error}</p>}
       <input
         type="text"
         name="title"
@@ -46,8 +45,8 @@ const PostForm = () => {
         value={post.content}
         onChange={handleChange}
         placeholder="Write your post here..."
-        required>
-      </textarea>
+        required
+      ></textarea>
       <button type="submit">Add Post</button>
     </form>
   );

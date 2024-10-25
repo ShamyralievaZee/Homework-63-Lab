@@ -1,6 +1,5 @@
 import PostForm from '../../components/PostForm/PostForm.tsx';
-const Add = () => {
+const EditPost = () => {
   return <PostForm />;
 };
-
-export default Add;
+export default EditPost;

@@ -122,18 +122,61 @@ body {
 
 .post-read-more{
   color: #c85e31;
-  text-decoration: underline;
   margin-top: 10px;
 }
 
 .post-edit{
-  color: black;
-  background-color: #bc9a9a;
+  color:  #e3cabb;
+  background: #7a6161;
   border: none;
   border-radius: 4px;
   padding: 4px;
   width: 50px;
   text-align: center;
+}
+
+.post-edit:hover{
+  background-color: #d58c6d;
+  color: #4e3838;
+}
+
+.view-content{
+  padding: 20px;
+  border: 1px solid #c3a5a5;
+  margin-bottom: 30px;
+  min-height: 250px;
+  text-align: left;
+}
+
+.view-button{
+  color:  #e3cabb;
+  background: #7a6161;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.view-edit{
+  color:  #e3cabb;
+  background: #7a6161;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  width: 70px;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.view-btn:hover{
+  background-color: #d58c6d;
+  color: #4e3838;
+}
+
+.contacts-box{
+  text-align: left;
 }
 
 

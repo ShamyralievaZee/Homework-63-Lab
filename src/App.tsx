@@ -4,6 +4,8 @@ import Home from './containers/Home/Home.tsx';
 import './App.css';
 import AboutUs from './containers/AboutUs/AboutUs.tsx';
 import Contacts from './containers/Contacts/Contacts.tsx';
+import EditPost from './containers/EditPost/EditPost.tsx';
+import PostView from './components/PostView/PostView.tsx';
 import Add from './containers/Add/Add.tsx';
 
 const App = () => {
@@ -16,6 +18,7 @@ const App = () => {
           </NavLink>
           <div>
             <ul className="navbar-nav">
+
               <li className="nav-item">
                 <NavLink className="nav-link" to="/">Home</NavLink>
               </li>
@@ -25,7 +28,7 @@ const App = () => {
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about">About</NavLink>
+                <NavLink className="nav-link" to="/about">About Us</NavLink>
               </li>
 
               <li className="nav-item">
@@ -37,12 +40,14 @@ const App = () => {
       </nav>
 
       <div className="container mt-3">
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/about" element={<AboutUs/>} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/new-post" element={<Add />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/new-post" element={<Add />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/posts/:id" element={<PostView />} />
+            <Route path="/posts/:id/edit" element={<EditPost />} />
+          </Routes>
       </div>
     </div>
   );
